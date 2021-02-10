@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.greeting {
+  background: url("../img/backgrounds/banner_bg.jpg") 100% 100% no-repeat;
+  background-size: cover;
+  height: 776px;
+  display: flex;
+  flex-flow: row wrap;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  margin: auto;
+
+  h1 {
+    font-size: 60px;
+    letter-spacing: 8px;
+    font-weight: bold;
+    margin: 200px auto auto 380px;
+    //display: none;
+  }
+
+  p {
+    font-size: 22px;
+    letter-spacing: 3px;
+    margin: -30px auto 0px 480px;
+    //display: none;
+  }
+
+  .buttons {
+    margin: 100px 580px 130px auto;
+    //display: none;
+
+    .button_banner {
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      text-transform: uppercase;
+      font-size: 20px;
+      width: 240px;
+      height: 80px;
+      background: none;
+      border: 2px white solid;
+      margin-right: 30px;
+
+      &:hover {
+        background: #00897b;
+        border: none;
+      }
+    }
+  }
+
+  a {
+    margin: -70px 600px 0px 803px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
