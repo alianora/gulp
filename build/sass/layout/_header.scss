@@ -15,11 +15,21 @@
       display: block;
       margin-left: 40px;
 
-      a {
+      #show-menu {
         color: black;
         font-size: 20px;
         font-weight: bold;
-        text-decoration: none;
+        border: none;
+        background: none;
+      }
+
+      #hide-menu {
+        height: 30px;
+        width: 30px;
+        position: fixed;
+        opacity: 0;
+        border: none;
+        background: none;
       }
     }
   }
@@ -28,19 +38,32 @@
       margin-left: 280px;
       align-items: center;
 
+      @include point(lg-down){
+        position: fixed;
+        background: white;
+        margin-left: 0;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+      }
 
       ul {
         display: flex;
         margin-bottom: 0;
         list-style-type: none;
+
         @include point(lg-down){
-          display: block;
-          margin-left: auto;
+          flex-direction: column;
+          align-items: center;
+          padding-top: 10%;
         }
 
         > li {
           margin-right: 30px;
           @include point(lg-down){
+            font-size: 35px;
             line-height: 3.5;
           }
         }
@@ -76,3 +99,6 @@
     margin-left: auto;
   }
 
+  .open {
+    opacity: 1;
+  }

@@ -18,7 +18,7 @@
 
         <a id="logo">Your logo</a>
 
-        <div class="nav">
+        <div class="nav" id="nav">
         <ul class="nav-bar">
             <li><a href="javascript:void(0)">Home</a></li>
             <li><a href="javascript:void(0)">About</a></li>
@@ -36,7 +36,11 @@
         </div>
 
         <div class="mobile">
-            <a href="javascript:void(0)">Menu</a>
+            <button id="show-menu" onclick="showMenu()">Menu</button>
+            <button id="hide-menu" onclick="hideMenu()">
+                <!--<img src="../img/icons-png/icon-cross.png" alt="">-->
+                Hide
+            </button>
         </div>
 
     </header>
@@ -64,6 +68,8 @@
     </div>
 
     </div>
+
+<script src="../js/header/adaptive-menu.js"></script>
 
 </body>
 
