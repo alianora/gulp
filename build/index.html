@@ -7,26 +7,24 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Web development</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.min.css?v=2">
+    <link rel="stylesheet" type="text/css" href="../css/style.min.css">
 </head>
 
 <body>
 
-<div class="container">
-
-    <header class="header">
-
+<header class="header">
+    <div class="container">
         <a id="logo">Your logo</a>
 
         <div class="nav" id="nav">
-        <ul class="nav-bar">
-            <li><a href="javascript:void(0)">Home</a></li>
-            <li><a href="javascript:void(0)">About</a></li>
-            <li><a href="javascript:void(0)">Servicing</a></li>
-            <li><a href="javascript:void(0)">Portfolio</a></li>
-            <li><a href="javascript:void(0)">Blog</a></li>
-            <li><a href="javascript:void(0)">Contact us</a></li>
-        </ul>
+            <ul class="nav-bar">
+                <li><a href="javascript:void(0)">Home</a></li>
+                <li><a href="javascript:void(0)">About</a></li>
+                <li><a href="javascript:void(0)">Servicing</a></li>
+                <li><a href="javascript:void(0)">Portfolio</a></li>
+                <li><a href="javascript:void(0)">Blog</a></li>
+                <li><a href="javascript:void(0)">Contact us</a></li>
+            </ul>
         </div>
 
         <div class="search">
@@ -37,37 +35,60 @@
 
         <div class="mobile">
             <button id="show-menu" onclick="showMenu()">Menu</button>
-            <button id="hide-menu" onclick="hideMenu()">
-                <!--<img src="../img/icons-png/icon-cross.png" alt="">-->
-                Hide
-            </button>
+            <button id="hide-menu" onclick="hideMenu()">Close</button>
         </div>
+    </div>
 
-    </header>
 
-    <div class="wrap">
 
-        <div class="greeting">
+</header>
 
-            <h1>Web development project</h1>
-            <p>Very suitable to support all web development projects</p>
+    <div class="greeting">
 
-            <div class="buttons">
+        <div class="container">
 
-                <button class="button_banner">our services</button>
-                <button class="button_banner">hire is now</button>
+            <div class="content">
+
+                <h1>Web development project</h1>
+                <p>Very suitable to support all web development projects</p>
+
+                <div class="buttons">
+
+                    <button class="button_banner">our services</button>
+                    <button class="button_banner">hire is now</button>
+
+                </div>
+
+                <a href="javascript:void(0)">
+                    <img src="../img/icons-png/arrow-down.png" alt="">
+                </a>
 
             </div>
 
-            <a href="#">
-                <img src="../img/icons-png/arrow-down.png" alt="">
-            </a>
-
         </div>
 
     </div>
 
+<div class="pricing">
+
+    <div class="container">
+
+        <div class="price">
+
+        <h1>Pricing</h1>
+
+            <div class="price-list">
+
+                <div class="price-block"></div>
+                <div class="price-block"></div>
+                <div class="price-block"></div>
+
+            </div>
+        </div>
+
     </div>
+
+</div>
 
 <script src="../js/header/adaptive-menu.js"></script>
 

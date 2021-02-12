@@ -1,16 +1,16 @@
 .header {
-    padding: 60px 0;
-    display: flex;
+  padding: 60px 0;
+}
+
+.container {
+  display: flex;
+}
 
   .mobile {
     display: none;
-
-    #mobile__toggle {
-      opacity: 0;
-    }
   }
 
-  @include point(lg-down){
+  @include point(def-down) {
     .mobile {
       display: block;
       margin-left: 40px;
@@ -24,65 +24,77 @@
       }
 
       #hide-menu {
-        height: 30px;
-        width: 30px;
-        position: fixed;
-        opacity: 0;
-        border: none;
-        background: none;
-      }
-    }
-  }
-
-    .nav {
-      margin-left: 280px;
-      align-items: center;
-
-      @include point(lg-down){
-        position: fixed;
-        background: white;
-        margin-left: 0;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-      }
-
-      ul {
-        display: flex;
-        margin-bottom: 0;
-        list-style-type: none;
-
-        @include point(lg-down){
-          flex-direction: column;
-          align-items: center;
-          padding-top: 10%;
-        }
-
-        > li {
-          margin-right: 30px;
-          @include point(lg-down){
-            font-size: 35px;
-            line-height: 3.5;
-          }
-        }
-      }
-
-      a {
-        text-decoration: none;
         color: black;
         font-size: 20px;
         font-weight: bold;
-        letter-spacing: 2px;
+        position: fixed;
+        z-index: -1;
+        opacity: 0;
+        border: none;
+        background: none;
 
-        &:hover {
-          padding-bottom: 5px;
-          border-bottom: 2px black solid;
+        &.open {
+          opacity: 1;
+          z-index: 1;
         }
       }
     }
   }
+
+  .nav {
+    margin-left: 280px;
+    align-items: center;
+
+    @include point(def-down) {
+      position: fixed;
+      z-index: -1;
+      background: white;
+      margin-left: 0;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      &.open {
+        opacity: 1;
+        z-index: 1;
+      }
+    }
+
+    ul {
+      display: flex;
+      margin-bottom: 0;
+      list-style-type: none;
+
+      @include point(def-down) {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10%;
+      }
+
+      > li {
+        margin-right: 30px;
+        @include point(def-down) {
+          font-size: 35px;
+          line-height: 3.5;
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 2px;
+
+      &:hover {
+        padding-bottom: 5px;
+        border-bottom: 2px black solid;
+      }
+    }
+  }
+
 
   a#logo {
     font-size: 28px;
@@ -97,8 +109,4 @@
     width: 20px;
     height: 20px;
     margin-left: auto;
-  }
-
-  .open {
-    opacity: 1;
   }

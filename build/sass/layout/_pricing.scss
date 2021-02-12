@@ -1,0 +1,54 @@
+.pricing {
+    background: #a3a3a3;
+}
+
+.price {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  h1 {
+    padding-top: 10px;
+    padding-bottom: 50px;
+  }
+}
+
+.price-list {
+  display: flex;
+
+  @include point(def-down) {
+    flex-direction: column;
+  }
+}
+
+.price-block {
+  position: relative;
+  height: 500px;
+  width: 300px;
+  background: #fff;
+  overflow: hidden;
+  margin: 40px;
+  transition: box-shadow .4s;
+  box-shadow: 0 0 51px -1px rgba(61,61,61,0);
+
+  &:before{
+    background: #344e86;
+    content: '';
+    display: block;
+    height: 35%;
+    top: -26px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    transform: skewY(-5deg);
+    transform-origin: 100%;
+  }
+
+  &:hover {
+    box-shadow: 0 0 51px -1px rgba(61,61,61,0.8);
+  }
+}
+
