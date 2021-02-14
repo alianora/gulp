@@ -219,3 +219,15 @@ function initTabs(tabs, clearOnResize) {
 
 
 }
+
+function showMenu() {
+    document.getElementById('nav').classList.add('open');
+    document.getElementById('hide-menu').classList.add('open');
+    document.getElementById('show-menu').classList.add('open');
+}
+
+function hideMenu() {
+    document.getElementById('nav').classList.remove('open');
+    document.getElementById('hide-menu').classList.remove('open');
+    document.getElementById('show-menu').classList.remove('open');
+}

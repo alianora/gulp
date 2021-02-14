@@ -1,45 +1,71 @@
 .pricing {
-    background: #a3a3a3;
+    background: #f0f1f1;
 }
 
 .price {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 125px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 
   h1 {
+    font-weight: 800;
+    letter-spacing: 3px;
     padding-top: 10px;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
+    font-size: 30px;
+  }
+
+  p {
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 15px;
+    text-align: center;
+    padding: 20px 210px;
+
+    @include point(def-down) {
+      padding: 20px;
+    }
+  }
+
+  @include point(def-down) {
+    padding: 70px 0 0 0;
   }
 }
 
 .price-list {
+  padding: 125px 0 0 0;
   display: flex;
 
   @include point(def-down) {
     flex-direction: column;
+    padding-top: 60px;
   }
 }
 
 .price-block {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  height: 500px;
-  width: 300px;
+  height: 668px;
+  width: 370px;
   background: #fff;
   overflow: hidden;
-  margin: 40px;
+  margin: 30px;
   transition: box-shadow .4s;
   box-shadow: 0 0 51px -1px rgba(61,61,61,0);
 
+  @include point(def-down) {
+    margin: 30px 0;
+  }
+
   &:before{
-    background: #344e86;
+    background: #3949ab;
     content: '';
     display: block;
-    height: 35%;
-    top: -26px;
+    height: 30%;
+    top: -32px;
     left: 0;
     right: 0;
     position: absolute;
@@ -50,5 +76,69 @@
   &:hover {
     box-shadow: 0 0 51px -1px rgba(61,61,61,0.8);
   }
+
+  h2 {
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 3px;
+    color: white;
+    padding: 50px 115px 0;
+    z-index: 1;
+    font-size: 25px;
+
+    @include point(def-down) {
+      margin: 0;
+    }
+  }
+
+  p {
+    font-weight: normal;
+    letter-spacing: 3px;
+    color: white;
+    z-index: 1;
+    padding: 20px 20px;
+
+    .sup {
+      letter-spacing: -2px;
+      vertical-align: 20px;
+      font-size: 22px;
+    }
+  }
+
+  span {
+    letter-spacing: normal;
+    font-size: 50px;
+  }
+
+  .order {
+    color: black;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 0 100px;
+    width: 170px;
+    height: 69px;
+    background: none;
+    border: 2px black solid;
+
+    &:hover {
+      background: #00897b;
+      color: white;
+      border: none;
+    }
+  }
 }
 
+.benefits {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+
+  p {
+    letter-spacing: normal;
+    color: black;
+    padding: 30px 0 10px 0;
+    margin: 0 100px;
+    border-bottom: 1px black solid;
+    font-size: 17px;
+  }
+}

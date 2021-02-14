@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 //Media breakpoints
 $points: (
         st: 320,
@@ -26,8 +28,9 @@ $yellow-1: #EEDC82; // buttons
 
 
 //Font families
-$font-family: 'Noto Sans', sans-serif;
+$font-family: 'Open Sans', sans-serif;
 $font-style: normal;
+$font-family-button: 'Roboto', sans-serif;
 
 //PARAGRAPH STYLES
 $paragraph-margin: 0; //margin-bottom
